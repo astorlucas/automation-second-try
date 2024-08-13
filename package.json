@@ -1,0 +1,51 @@
+{
+  "name": "automation-second-try",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "appium": "^2.11.3",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "webdriverio": "^8.40.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/register": "^7.24.6",
+    "appium-uiautomator2-driver": "^3.7.6",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mocha": "^10.5.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "test": "mocha --require @babel/register test/**/*.spec.js",
+    "lint": "eslint 'test/**/*.js'",
+    "format": "prettier --write 'test/**/*.js'"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:mocha/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
