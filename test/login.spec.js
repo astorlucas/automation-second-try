@@ -1,5 +1,9 @@
 import { expect } from 'chai';
 import { remote } from 'webdriverio';
+import allureReporter from '@wdio/allure-reporter';
+
+allureReporter.addFeature('Login Tests');
+allureReporter.addSeverity('blocker');
 
 // Define capabilities directly in the file
 const capabilities = {
@@ -87,7 +91,9 @@ describe('Mobile App Login', function () {
     await buttonContinuar.click();
 
     // Wait until the password field is visible
-    const inputContrasena = await driver.$('//android.widget.EditText');
+    const inputContrasena = await driver.$(
+      '//android.widget.EditTextAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    );
     await driver.waitUntil(async () => await inputContrasena.isDisplayed(), {
       timeout: 10000, // Ajusta el timeout según sea necesario
       timeoutMsg: 'Password input field not visible after 10 seconds',
