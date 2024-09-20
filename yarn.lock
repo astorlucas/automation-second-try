@@ -2621,7 +2621,6 @@ asynckit@^0.4.0:
   version "1.0.0"
   resolved "file:"
   dependencies:
-    "@wdio/allure-reporter" "^8.39.0"
     appium "^2.11.3"
     automation-second-try "file:"
     chai "^5.1.1"
